@@ -16,7 +16,7 @@ export default function Home() {
             </div>
             <div className='entete'>
                 <Card className='image'>
-                    <img src={myphoto} className='photo'></img>                    
+                    <img src={myphoto} className='photo' alt='sary'></img>                    
                 </Card>
                 <Card  className='texte'>
                     <h2>Votre Prochaine Aventure Automobile Commence Ici!</h2>
