@@ -1,13 +1,14 @@
 import React,{useState} from 'react';
 import DownloadAppBanner from '../component/DownloadAppBanner';
-import '../assets/vendor/bootstrap/css/bootstrap.min.css';
-import '../assets/vendor/bootstrap-icons/bootstrap-icons.css';
-import '../assets/vendor/boxicons/css/boxicons.min.css';
-import '../assets/vendor/quill/quill.snow.css';
-import '../assets/vendor/quill/quill.bubble.css';
-import '../assets/vendor/remixicon/remixicon.css';
-import '../assets/vendor/simple-datatables/style.css';
+// import '../assets/vendor/bootstrap/css/bootstrap.min.css';
+// import '../assets/vendor/bootstrap-icons/bootstrap-icons.css';
+// import '../assets/vendor/boxicons/css/boxicons.min.css';
+// import '../assets/vendor/quill/quill.snow.css';
+// import '../assets/vendor/quill/quill.bubble.css';
+// import '../assets/vendor/remixicon/remixicon.css';
+// import '../assets/vendor/simple-datatables/style.css';
 // import '../assets/css/style.css';
+import useAddObjectLogin from '../hooks/login.js'
 
 const LoginPage = () => {
     const [showBanner, setShowBanner] = useState(false);
@@ -23,6 +24,16 @@ const LoginPage = () => {
     event.preventDefault();
     // Gérez la soumission du formulaire  ici
   };
+  const[mail,setEmail] = useState();
+  const[motdepasse,setMotdepasse] = useState();
+  const OnClickButton=()=>{
+    console.log("clicccccc");
+    const data = {
+      mail: "arotsiky59@gmail.com",
+      motdepasse :"1230!"
+    }
+    useAddObjectLogin("compte",data);
+  }
 
   return (
     <div className="container">
@@ -46,13 +57,13 @@ const LoginPage = () => {
                       <label htmlFor="yourUsername" className="form-label">Email</label>
                       <div className="input-group has-validation">
                         <span className="input-group-text" id="inputGroupPrepend">@</span>
-                        <input type="text" name="username" className="form-control" id="yourUsername" required />
+                        <input type="text" name="username" className="form-control" id="yourUsername" required value={mail} onChange={(e)=>{setEmail(e.target.value)}} />
                         <div className="invalid-feedback">Veuillez entrer votre adresse email</div>
                       </div>
                     </div>
                     <div className="mb-3">
                       <label htmlFor="yourPassword" className="form-label">Mot de passe</label>
-                      <input type="password" name="password" className="form-control" id="yourPassword" required />
+                      <input type="password" name="password" className="form-control" id="yourPassword" required value={motdepasse} onChange={(e)=>{setMotdepasse(e.target.value)}} />
                       <div className="invalid-feedback">Veuillez entrer votre mot de passe !</div>
                     </div>
                     <div className="mb-3">
@@ -62,10 +73,10 @@ const LoginPage = () => {
                       </div>
                     </div>
                     <div className="mb-3">
-                      <button className="btn btn-primary w-100" type="submit">Se connecter</button>
+                      <button className="btn btn-primary w-100" type="submit" onClick={OnClickButton}>Se connecter</button>
                     </div>
                     <div className="mb-3">
-                      <p className="small mb-0">Vous n'avez pas de compte ? <a href='#' onClick={handleRegisterClick}>Créez un compte</a></p>
+                      <p className="small mb-0">Vous n'avez pas de compte ? <a href='' onClick={handleRegisterClick}>Créez un compte</a></p>
                     </div>
                   </form>
                 </div>

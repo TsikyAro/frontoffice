@@ -28,12 +28,20 @@ export default function Menu() {
             lien:'formulaire',
             template: itemRenderer
         },
-        ...(token ? [{
-            label: 'Message',
-            icon: 'pi pi-envelope',
-            badge:  3,
-            template: itemRenderer
-        }] : []),
+        ...(token ? [
+            {
+                label: 'Message',
+                icon: 'pi pi-envelope',
+                badge:  3,
+                template: itemRenderer
+            },{
+                label: 'Favoris',
+                icon: 'pi pi-heart',
+                lien:'favoris',
+                template: itemRenderer
+            }
+
+        ] : []),
         ...(token ? [] : [{
             label: 'Connexion',
             icon: 'pi pi-sign-in',

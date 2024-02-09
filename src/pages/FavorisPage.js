@@ -7,9 +7,10 @@ import { Button } from 'primereact/button';
 import { InputText } from 'primereact/inputtext';
 import { classNames } from 'primereact/utils';
 import FavoriteIcon from '../component/Favoris';
-import myphoto from '../assets/img/landing.jpg'
+import myphoto from '../assets/img/landing.jpg';
+import Menu from '../component/Menu';
 
-export default function Tableau() {
+export default function FavorisPage() {
     
     // const [products, setProducts] = useState();
     const[ products] = useState([
@@ -87,6 +88,9 @@ export default function Tableau() {
             <Toast ref={toast} />
             <div className="card">
                 {/* <Toolbar className="mb-4" left={leftToolbarTemplate} right={rightToolbarTemplate}></Toolbar> */}
+                <div>
+                    <Menu/>
+                </div>
 
                 <DataTable ref={dt} value={products} selection={selectedProducts} onSelectionChange={(e) => setSelectedProducts(e.value)}
                         dataKey="id"  paginator rows={10} rowsPerPageOptions={[5, 10, 25]}

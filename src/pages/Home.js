@@ -7,6 +7,7 @@ import 'primereact/resources/primereact.min.css';
 import myphoto from '../assets/img/landing.jpg';
 import Menu from '../component/Menu';
 import Produit from './Produit';
+import ImageUploader from './ImageUploader';
 
 export default function Home() {
     return (
@@ -28,6 +29,9 @@ export default function Home() {
             <Card title="Aperçu de nos produits">
                 <Produit></Produit>
             </Card>
+            {/* <div>
+                {/* <ImageUploader/> 
+            </div> */}
         </div>
     )
 }

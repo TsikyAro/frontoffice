@@ -8,6 +8,7 @@ import Home from './pages/Home';
 import NouveauVoiture from "./pages/NouveauVoiture";
 import LoginPage from "./pages/Login";
 import DownloadAppBanner from "./component/DownloadAppBanner";
+import FavorisPage from "./pages/FavorisPage";
 function App() {
   return (
     <div className="App">
@@ -18,6 +19,7 @@ function App() {
             <Route path="/formulaire" element={<NouveauVoiture/>}/>
             <Route path="/login" element={<LoginPage/>}/>
             <Route path="/register" element={<DownloadAppBanner/>}/>
+            <Route path="/favoris" element={<FavorisPage/>}></Route>
           </Routes>
       </Router>
     </div>
