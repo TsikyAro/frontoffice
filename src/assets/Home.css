@@ -1,0 +1,94 @@
+*{
+	/* outline:thin solid rgb(13, 18, 31);  */
+}
+.menuse Menu{
+    background-color: #000000;
+    width:100%;
+}
+.content{
+    background-color: aqua;
+    margin-top: 0%;
+    /* height:900px; */
+    display: flex;
+}
+.image{
+    margin-left: 5%;    
+    background-color: #000000;
+}
+.photo{
+    max-width: 600px;
+    height: 400px;
+}
+.entete{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+
+}
+.texte{
+    margin-left: 2%;
+    margin-right:1%;
+    width:fit-content;
+    background-color: #ffffff;
+}
+.texte{
+    position: relative;
+    z-index: 10;
+}
+
+.texte h2{
+    font-size: 3.5em;
+    font-weight: 500;
+    color: #000000;
+    line-height: 1em;
+    text-transform: uppercase;
+}
+.logo{
+    
+}
+/* Ajoutez une règle de style pour les écrans plus petits à l'aide de media query */
+@media (max-width: 991px) {
+    .entete {
+        padding: 20px; /* Ajustez l'espacement pour les petits écrans */
+    }
+
+    .texte h2 {
+        font-size: 1.5em; /* Réduisez encore plus la taille de la police pour les écrans plus petits */
+    }
+    /* Ajoutez une règle de style pour rendre la section 'entete' responsive */
+.entete {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: column; /* Changez la direction en colonne pour les écrans plus petits */
+    align-items: center; /* Centrez les éléments */
+    text-align: center; /* Centrez le texte */
+}
+
+/* Ajustez les styles pour l'image */
+.image {
+    margin-bottom: 20px; /* Ajoutez de l'espace sous l'image pour éviter un encombrement */
+    background-color: #000000;
+}
+
+.photo {
+    max-width: 100%; /* Assurez-vous que l'image est toujours à 100% de la largeur du conteneur parent */
+    height: auto; /* Assurez-vous que la hauteur est ajustée de manière proportionnelle */
+}
+
+/* Ajustez les styles pour le texte */
+.texte {
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 100%; /* Assurez-vous que le texte occupe 100% de la largeur sur les petits écrans */
+    background-color: #ffffff;
+}
+
+.texte h2 {
+    font-size: 1.5em; /* Réduisez la taille de la police pour les écrans plus petits */
+}
+
+}
+

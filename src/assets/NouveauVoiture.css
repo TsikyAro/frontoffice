@@ -1,0 +1,35 @@
+*{
+	/* outline:thin solid rgb(13, 18, 31);  */
+}
+  
+.contenair{
+    width: 80%;
+    max-width: 500px;
+    height: auto; 
+    margin: 3% auto; 
+    margin-left:2%;
+    margin-right: 2%;
+    /* background-color: aqua; */
+}
+.voiture{
+    display: flex;
+    background-color: azure;
+    height: auto;
+    margin: 5% auto;
+    width: 80%;
+    max-width: 100%;
+}
+@media (max-width: 768px) {
+    .voiture {
+        flex-direction: column; 
+        align-items: center; 
+        width: 90%;         
+        max-width: none; 
+    }
+    
+    .contenair{
+        width: 100%; 
+        max-width: none; 
+        margin: 5% auto; 
+    }
+}

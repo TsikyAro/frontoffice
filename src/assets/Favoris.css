@@ -1,0 +1,22 @@
+body { margin:  1.5em;}
+
+/* style favorite icon */
+[class^=icon] {
+   font-size:  1.5em;
+   color: white;
+   font-family: dingbats;
+   -webkit-text-stroke:  1.5px #ddd;
+}
+
+[class^=icon].selected { color: rgb(246, 32, 64); }
+[class^=icon].selected,
+[data-descr]:hover::after { -webkit-text-stroke:  0; }
+
+/* override tool tip styles */
+[class^=icon][data-descr] { text-decoration: none; }
+[class^=icon]::selection{ background: inherit; }
+[class^=icon][data-descr]:hover::after {
+   color: black;
+   font-size: .75em;
+   min-width:  7em;
+}
